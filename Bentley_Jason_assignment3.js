@@ -4,7 +4,7 @@
 // Author: Jason Bentley
 // Created for: SDI Online 1205
 // First assignment: Project 3: Night Out with coworkers
-var beerPrice = 15;
+
 var displayJson = function function (json) {
 	for (var i = 0; i < json.coworkers.length; i++){
 		var coworker = json.coworkers[i];
@@ -19,8 +19,9 @@ displayJson(json);
 var bar = {
 	barName : "Roxbury",
 	serveBeer : true,
+	beerPrice : 15,
 	takeMoney : function(money, beers) {
-	return (money - (beerPrice * beers));
+	return (money - (bar.beerPrice * beers));
 	}
 };
 
@@ -35,12 +36,15 @@ console.log(moneyLeft);
 var taxi = {
 	name : "Yellow Cab",
 	driver : "Zach",
+	price : 40,
 	getDriverName : function() {
 		return (taxi.driver);
 	},
 	mutateDriver : function(newDriver) {
 		taxi.driver = newDriver;	
 	}
+	
+	
 };
 var rememberName = taxi.getDriverName();
 console.log(rememberName);
@@ -48,4 +52,13 @@ taxi.mutateDriver("Alien Dude");
 
 console.log(taxi.driver);
 
-
+var canWeAfford = function() {
+		if (taxi.price <= moneyLeft) {
+			canWe = ("Sweet! We don't have to walk home!");
+		} else {
+			canWe = ("UhOh");
+		}
+		return canWe;
+};
+var canWe = canWeAfford();
+console.log(canWe);
