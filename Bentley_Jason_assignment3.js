@@ -20,7 +20,7 @@ var bar = {
 	barName : "Roxbury",
 	serveBeer : true,
 	takeMoney : function(money, beers) {
-		return (money - (beerPrice * beers));
+	return (money - (beerPrice * beers));
 	}
 };
 
@@ -32,4 +32,13 @@ console.log(moneyLeft);
 
 
 
+var taxi = {
+	name : "Yellow Cab",
+	driver : "Zach",
+	getDriverName : function() {
+		return (taxi.driver);
+	}
 
+};
+var rememberName = taxi.getDriverName();
+console.log(rememberName);
