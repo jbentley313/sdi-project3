@@ -37,8 +37,15 @@ var taxi = {
 	driver : "Zach",
 	getDriverName : function() {
 		return (taxi.driver);
+	},
+	mutateDriver : function(newDriver) {
+		taxi.driver = newDriver;	
 	}
-
 };
 var rememberName = taxi.getDriverName();
 console.log(rememberName);
+taxi.mutateDriver("Alien Dude");
+
+console.log(taxi.driver);
+
+
