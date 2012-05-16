@@ -5,6 +5,12 @@
 // Created for: SDI Online 1205
 // First assignment: Project 3: Night Out with coworkers
 
+var peronalBelongins = ["Wallets", 
+						"Car Keys", 
+						"Phones", 
+];
+
+
 var displayJson = function function (json) {
 	for (var i = 0; i < json.coworkers.length; i++){
 		var coworker = json.coworkers[i];
@@ -28,8 +34,7 @@ var bar = {
 var moneyLeft = bar.takeMoney(100, 5);
 console.log(moneyLeft);
 
-// bar.barName = "Hooligans";
-// console.log(bar.barName);
+
 
 
 
@@ -52,13 +57,48 @@ taxi.mutateDriver("Alien Dude");
 
 console.log(taxi.driver);
 
+
+
+
+var lostBelongings = [];
+var loseBelongings = function(items) {
+	var ii = 0;
+	while (ii < items.length) {
+	var loseItems = (items[ii]);
+	lostBelongings.push(loseItems);
+	ii++; 
+	 
+	};
+	return lostBelongings;
+};
+
+var itemsLost = loseBelongings(peronalBelongins);
+console.log(itemsLost);
+
+
+
+
+
+
 var canWeAfford = function() {
 		if (taxi.price <= moneyLeft) {
 			canWe = ("Sweet! We don't have to walk home!");
 		} else {
-			canWe = ("UhOh");
+			canWe = ("It looks like we are going to be walking home tonight.");
 		}
 		return canWe;
 };
 var canWe = canWeAfford();
 console.log(canWe);
+
+
+
+
+
+
+
+
+
+// for (i = 0; i < items.length; i++) {
+// 	 var loseItems = (items[i]);
+// 	 lostBelongings.push(loseItems);
