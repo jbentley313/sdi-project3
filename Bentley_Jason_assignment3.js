@@ -23,18 +23,17 @@ displayJson(json);
 
 
 var bar = {
-	barName : "Roxbury",
+	barName : "The Roxbury",
 	beerPrice : 15,
 	takeMoney : function(money, beers) {
 	return (money - (bar.beerPrice * beers));
 	}
 };
+console.log("The coworkers decided to go out to " + bar.barName + " to get some drinks.");
+console.log("They have some money, but they need to leave enough money for the taxi ride home.");
 
-var moneyLeft = bar.takeMoney(1000, 5);
-console.log(moneyLeft);
-
-
-
+var moneyLeft = bar.takeMoney(275, 14);
+console.log("After spending $ " + bar.beerPrice + " per drink, they had " + "$" + moneyLeft + " left for the ride home.");
 
 
 var taxi = {
@@ -49,35 +48,10 @@ var taxi = {
 		taxi.driver = newDriver;	
 	}
 	
-	
 };
 var rememberName = taxi.getDriverName();
-console.log(rememberName);
-taxi.mutateDriver("Alien Dude");
 
-console.log(taxi.driver);
-
-
-
-
-var lostBelongings = [];
-var loseBelongings = function(items) {
-	var ii = 0;
-	while (ii < items.length) {
-	var loseItems = (items[ii]);
-	lostBelongings.push(loseItems);
-	ii++; 
-	 
-	};
-	return lostBelongings;
-};
-
-var itemsLost = loseBelongings(peronalBelongins);
-console.log(itemsLost);
-
-
-
-
+console.log("They hailed a " + taxi.name + " driven by a weird looking guy named " + rememberName  + ".");
 
 var canWeAfford = function(dirtCheck) {
 	if (dirtCheck===true) {
@@ -93,6 +67,35 @@ var canWeAfford = function(dirtCheck) {
 	};
 };
 
+console.log("They checked to see if the taxi was dirty, and to see if they had enough money leftover to be able to pay for the ride.");
+
+var canWe = canWeAfford(taxi.isDirty);
+console.log(canWe);
+
+
+console.log("They got in and began the ride home. " + taxi.driver + " mutated into an alien while the taxi was in motion.  Everyone was scared at first, but the alien turned out to be cool.");
+
+taxi.mutateDriver("Alien Dudey");
+
+console.log('"My name is ' + taxi.driver + '", said the new taxi driver.');
+
+
+var lostBelongings = [];
+var loseBelongings = function(items) {
+	var ii = 0;
+	while (ii < items.length) {
+	var loseItems = (items[ii]);
+	lostBelongings.push(loseItems);
+	ii++; 
+	 
+	};
+	return lostBelongings;
+};
+
+console.log("The coworkers realized every single person lost three items.");
+
+var itemsLost = loseBelongings(peronalBelongins);
+console.log(itemsLost);
 
 var newFriend = {
     name : "Bob",
@@ -103,57 +106,11 @@ var newFriend = {
     
 };
 
+var randomNewFriend = newFriend.getinfo();
+
+console.log("They finally made it back to their homes.  They all couldn't wait to tell " + randomNewFriend + " what had happened.");
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var canWe = canWeAfford(taxi.isDirty);
-console.log(canWe);
-
-
-
-
-
-var who = newFriend.getinfo();
-console.log(who);
 
 
 
