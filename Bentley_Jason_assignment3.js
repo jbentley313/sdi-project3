@@ -92,17 +92,68 @@ var canWeAfford = function(dirtCheck) {
 		return canWe;
 	};
 };
-var canWe = canWeAfford(taxi.isDirty);
-console.log(canWe);
+
 
 var newFriend = {
     name : "Bob",
-    city : "East LA"
+    city : "East LA",
+    getinfo : function () {
+    	return (this.name + " from " + this.city);
+    }
     
 };
-console.log(newFriend);
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var canWe = canWeAfford(taxi.isDirty);
+console.log(canWe);
+
+
+
+
+
+var who = newFriend.getinfo();
+console.log(who);
 
 
 
