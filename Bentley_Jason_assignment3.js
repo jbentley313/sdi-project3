@@ -12,7 +12,7 @@ var peronalBelongins = ["Wallets",
 
 
 var displayJson = function function (json) {
-	for (var i = 0; i < json.coworkers.length; i++){
+	for (var i = 0; i < json.coworkers.length; i++) {
 		var coworker = json.coworkers[i];
 		console.log(coworker.name + " is " + coworker.age + " years old, and lives in " + coworker.city + ". His favorite beers are:" + coworker.favBeers + ".");
 	};
@@ -24,14 +24,13 @@ displayJson(json);
 
 var bar = {
 	barName : "Roxbury",
-	serveBeer : true,
 	beerPrice : 15,
 	takeMoney : function(money, beers) {
 	return (money - (bar.beerPrice * beers));
 	}
 };
 
-var moneyLeft = bar.takeMoney(100, 5);
+var moneyLeft = bar.takeMoney(1000, 5);
 console.log(moneyLeft);
 
 
@@ -41,6 +40,7 @@ console.log(moneyLeft);
 var taxi = {
 	name : "Yellow Cab",
 	driver : "Zach",
+	isDirty : false,
 	price : 40,
 	getDriverName : function() {
 		return (taxi.driver);
@@ -79,18 +79,28 @@ console.log(itemsLost);
 
 
 
-
-var canWeAfford = function() {
+var canWeAfford = function(dirtCheck) {
+	if (dirtCheck===true) {
+			canWe = ("This cab is nasty!  Let's Walk.");
+			return canWe;
+	} else {
 		if (taxi.price <= moneyLeft) {
 			canWe = ("Sweet! We don't have to walk home!");
 		} else {
 			canWe = ("It looks like we are going to be walking home tonight.");
 		}
 		return canWe;
+	};
 };
-var canWe = canWeAfford();
+var canWe = canWeAfford(taxi.isDirty);
 console.log(canWe);
 
+var newFriend = {
+    name : "Bob",
+    city : "East LA"
+    
+};
+console.log(newFriend);
 
 
 
@@ -98,7 +108,3 @@ console.log(canWe);
 
 
 
-
-// for (i = 0; i < items.length; i++) {
-// 	 var loseItems = (items[i]);
-// 	 lostBelongings.push(loseItems);
